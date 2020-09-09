@@ -1,0 +1,119 @@
+
+
+.featured-headline{
+    text-align: center;
+    padding: 1rem;
+
+    &__title {
+        h1 {
+            font-size: 1.5rem;
+
+            @include Medium {
+                font-size: 2rem;
+            }
+        }
+    }
+    &__subtitle {
+        h2 {
+            font-size: 1.2rem;
+
+            @include Medium {
+                font-size: 1.75rem;
+            }
+        }
+    }
+}
+
+.featured {
+    background-color: pink;
+    width: 100vw;
+    min-height: 300px;
+    height: min-content;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:
+        1fr;
+    grid-template-areas:
+        "featured-large"
+        "featured-medium"
+        "featured-small-one"
+        "featured-small-two";
+
+    @include Small {
+        width: 90vw;
+        max-width: 1200px;
+        height: 300px;
+        background-color: orange;
+        grid-template-columns:
+            2fr 1fr 1fr;
+        grid-template-areas:
+            "featured-large featured-medium    featured-medium"
+            "featured-large featured-small-one featured-small-two"
+        }
+
+    @include Medium {
+        height: 400px;
+    }
+
+    @include veryLarge {
+        max-width: 1500px;
+    }
+
+    &__large {
+        background-color: lightblue;
+        height: 300px;
+        width: 100%;
+        grid-area: featured-large;
+
+        @include Small {
+            height: 300px;
+        }
+
+        @include Medium {
+            height: 400px;
+        }
+    }
+
+    &__medium {
+        background-color: green;
+        height: 200px;
+        grid-area: featured-medium;
+
+        @include Small {
+            height: 150px;
+        }
+
+        @include Medium {
+            height: 200px;
+        }
+    }
+
+    &__small--one {
+        background-color: purple;
+        height: 200px;
+        grid-area: featured-small-one;
+
+        @include Small {
+            height: 150px;
+        }
+
+        @include Medium {
+            height: 200px;
+        }
+    }
+
+    &__small--two {
+        background-color: gray;
+        height: 200px;
+        grid-area: featured-small-two;
+
+        @include Small {
+            height: 150px;
+        }
+
+        @include Medium {
+            height: 200px;
+        }
+    }
+    
+}

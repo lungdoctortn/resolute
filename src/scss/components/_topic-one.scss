@@ -1,0 +1,131 @@
+
+.topic-one-headline {
+    text-align: center;
+    padding: 1rem;
+    padding-top: 5rem;
+
+    &__title {
+        h1 {
+            font-size: 1.5rem;
+
+            @include Medium {
+                font-size: 2rem;
+            }
+        }
+    }
+    &__subtitle {
+        h2 {
+            font-size: 1.2rem;
+
+            @include Medium {
+                font-size: 1.75rem;
+            }
+        }
+    }
+}
+.topic-one-banner {
+    padding-top: .8rem;
+    text-align: left;
+
+    h5 {
+        color: white;
+        background-color: green;
+        display: inline-block;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    &__line {
+        border-top: 2px solid green;
+    }
+
+    @include Small {
+        width: 90vw;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    @include veryLarge {
+        max-width: 1500px;
+    }
+}
+
+.topic-one {
+    background-color: pink;
+    width: 100vw;
+    height: min-content;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:
+        1fr;
+    grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four"
+        "five"
+        "six";
+
+    @include Small {
+        width: 90vw;
+        max-width: 1200px;
+        background-color: orange;
+        grid-template-columns:
+            1fr 1fr;
+        grid-template-areas:
+            "one two"
+            "three four"
+            "five six";
+        }
+
+    @include Medium {
+        max-width: 1200px;
+    }
+
+    @include veryLarge {
+        max-width: 1500px;
+    }
+
+    &__medium {
+        background-color: lightblue;
+        height: 300px;
+
+        @include Medium {
+            height: 400px;
+        }
+
+        &.one {
+            background-color: chartreuse;
+            grid-area: one;
+        }
+
+        &.two {
+            background-color: pink;
+            grid-area: two;
+        }
+    }
+
+    &__small {
+        background-color: lightgreen;
+        height: 150px;
+
+        &.one {
+            background-color: red;
+            grid-area: three
+        }
+        &.two {
+            background-color: green;
+            grid-area: four
+        }
+        &.three {
+            background-color: pink;
+            grid-area: five
+        }
+        &.four {
+            background-color: coral;
+            grid-area: six;
+        }
+    }
+}
+

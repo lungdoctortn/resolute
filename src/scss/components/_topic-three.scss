@@ -1,0 +1,138 @@
+.topic-three-headline {
+    text-align: center;
+    padding: 1rem;
+    padding-top: 5rem;
+
+    &__title {
+        h1 {
+            font-size: 1.5rem;
+
+            @include Medium {
+                font-size: 2rem;
+            }
+        }
+    }
+    &__subtitle {
+        h2 {
+            font-size: 1.2rem;
+
+            @include Medium {
+                font-size: 1.75rem;
+            }
+        }
+    }
+}
+.topic-three-banner {
+    padding-top: .8rem;
+    text-align: left;
+
+    h5 {
+        color: white;
+        background-color: green;
+        display: inline-block;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    &__line {
+        border-top: 2px solid green;
+    }
+
+    @include Small {
+        width: 90vw;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    @include veryLarge {
+        max-width: 1500px;
+    }
+}
+
+.topic-three {
+    background-color: pink;
+    width: 100vw;
+    height: min-content;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:
+        1fr;
+    grid-template-areas:
+        "topic-three__large"
+        "topic-three__small1"
+        "topic-three__small2"
+        "topic-three__small3"
+        "topic-three__small4";
+
+    @include Medium {
+        width: 90vw;
+        max-width: 1200px;
+        background-color: orange;
+        grid-template-columns:
+            1fr 1fr;
+        grid-template-areas:
+            "topic-three__large topic-three__small1"
+            "topic-three__large topic-three__small2"
+            "topic-three__large topic-three__small3"
+            "topic-three__large topic-three__small4";            
+        }
+
+    @include Medium {
+        max-width: 1200px;
+    }
+
+    @include veryLarge {
+        max-width: 1500px;
+    }
+
+    &__large {
+        background-color: lightblue;
+        height: 300px;
+        grid-area: topic-three__large;
+
+        @include Medium {
+            height: 400px;
+        }
+    }
+
+    &__small1 {
+        background-color: lightgreen;
+        height: 200px;
+        grid-area: topic-three__small1;
+
+        @include Medium {
+            height: 100px;
+        }
+    }
+
+    &__small2 {
+        background-color: lightgray;
+        height: 200px;
+        grid-area: topic-three__small2;
+
+        @include Medium {
+            height: 100px;
+        }
+    }
+
+    &__small3 {
+        background-color: steelblue;
+        height: 200px;
+        grid-area: topic-three__small3;
+
+        @include Medium {
+            height: 100px;
+        }
+    }
+
+    &__small4 {
+        background-color: chartreuse;
+        height: 200px;
+        grid-area: topic-three__small4;
+
+        @include Medium {
+            height: 100px;
+        }
+    }
+}
