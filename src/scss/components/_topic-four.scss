@@ -1,0 +1,131 @@
+.topic-four-headline {
+    text-align: center;
+    padding: 1rem;
+    padding-top: 5rem;
+
+    &__title {
+        h1 {
+            font-size: 1.5rem;
+
+            @include Medium {
+                font-size: 2rem;
+            }
+        }
+    }
+    &__subtitle {
+        h2 {
+            font-size: 1.2rem;
+
+            @include Medium {
+                font-size: 1.75rem;
+            }
+        }
+    }
+}
+.topic-four-banner {
+    padding-top: .8rem;
+    text-align: left;
+
+    h5 {
+        color: white;
+        background-color: green;
+        display: inline-block;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    &__line {
+        border-top: 2px solid green;
+    }
+
+    @include Small {
+        width: 90vw;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    @include veryLarge {
+        max-width: 1500px;
+    }
+}
+
+.topic-four {
+    background-color: pink;
+    width: 100vw;
+    height: min-content;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:
+        1fr;
+    grid-template-areas:
+        "topic-four__small1"
+        "topic-four__small2"
+        "topic-four__small3"
+        "topic-four__small4";
+
+    @include Medium {
+        width: 90vw;
+        max-width: 1200px;
+        background-color: orange;
+        grid-template-columns:
+            1fr;
+        grid-template-areas:
+            "topic-four__small1"
+            "topic-four__small2"
+            "topic-four__small3"
+            "topic-four__small4";            
+        }
+
+    @include Medium {
+        max-width: 1200px;
+    }
+
+    @include veryLarge {
+        max-width: 1500px;
+    }
+
+    &__small1 {
+        background-color: lightgreen;
+        height: 100px;
+        grid-area: topic-four__small1;
+
+        @include Medium {
+            height: 200px;
+        }
+    }
+
+    &__small2 {
+        background-color: lightgray;
+        height: 100px;
+        grid-area: topic-four__small2;
+
+        @include Medium {
+            height: 200px;
+        }
+    }
+
+    &__small3 {
+        background-color: steelblue;
+        height: 100px;
+        grid-area: topic-four__small3;
+
+        @include Medium {
+            height: 200px;
+        }
+    }
+
+    &__small4 {
+        background-color: chartreuse;
+        height: 100px;
+        grid-area: topic-four__small4;
+
+        @include Medium {
+            height: 200px;
+        }
+    }
+}
+
+.space {
+    height: 300px;
+}

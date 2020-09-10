@@ -71,6 +71,26 @@
         <div class="topic-three__small4">post small4</div>
     </div>
 
+    <!-- Topic Four -->
+
+    <div class="topic-four-headline">
+        <div class="topic-four-headline__title"><h1>Topic Four</h1></div>
+        <div class="topic-four-headline__subtitle"><h2>All Lives Matter</h2></div>
+        <div class="topic-four-banner">
+            <div class="topic-four-banner__title"><h5>topic four</h5></div>
+            <hr class="topic-four-banner__line" >
+        </div>
+    </div>
+
+    <div id="container" class="topic-four">
+        <div class="topic-four__small1">post four-small1</div>
+        <div class="topic-four__small2">post four-small2</div>
+        <div class="topic-four__small3">post four-small3</div>
+        <div class="topic-four__small4">post four-small4</div>
+    </div>
+
 </section>
+
+<div class="space"></div>
 
 <?php get_footer(); ?>
