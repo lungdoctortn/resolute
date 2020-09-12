@@ -11,7 +11,7 @@
     <div id="container" class="featured">
 
     <!-- This is the large image on the featured topics section -->
-        <div class="featured__large">
+    <article <?php post_class( array( 'class' => 'featured__large' ) ); ?>>
 
         <?php
             $featuredArguments = array(
@@ -28,7 +28,7 @@
             ?>
 
                 <div class="img-wrapper">
-                    <img src="https://cdn.pixabay.com/photo/2020/08/27/14/55/adler-5522202_960_720.jpg" alt="">
+                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large', array( 'class' => 'img' ) ); ?></a>
                 </div>
                 <div class="featured__prose">
                     <div class="featured__prose--category">
@@ -48,20 +48,47 @@
             endif;
         ?>
 
-        </div>
-        <div class="featured__medium">
-            <div class="img-wrapper">
-                    <img src="https://cdn.pixabay.com/photo/2020/08/27/14/55/adler-5522202_960_720.jpg" alt="">
-            </div>
-            <div class="featured__prose">
-                <div class="featured__prose--category">
-                    Category
-                </div>
-                <div class="featured__prose--title">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio, iure?
-                </div>
-            </div>
-        </div>
+        </article>
+
+        <!-- This is the large image on the featured topics section -->
+        <article <?php post_class( array( 'class' => 'featured__medium' ) ); ?>>
+
+            <?php
+                $featuredArguments = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 1,
+                    'orderedby' => "publish_date",
+                    'order' => "DESC",
+                    'offset' => 1
+                );
+
+                $featured = new WP_Query( $featuredArguments );
+                if( $featured->have_posts() ):
+                    while( $featured->have_posts() ): $featured->the_post();
+                ?>
+
+                    <div class="img-wrapper">
+                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large', array( 'class' => 'img' ) ); ?></a>
+                    </div>
+                    <div class="featured__prose">
+                        <div class="featured__prose--category">
+                            <?php the_category( ', ' ); ?>
+                        </div>
+                        <div class="featured__prose--title">
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                        </div>
+                        <div class="featured__prose--excerpt">
+                            <p><?php echo wp_trim_words( get_the_excerpt(  ), 20 ); ?></p>
+                        </div>
+                    </div>
+
+                <?php
+                    endwhile;
+                    wp_reset_postdata();
+                endif;
+            ?>
+
+        </article>
         <div class="featured__small--one">
             <div class="img-wrapper">
                 <img src="https://cdn.pixabay.com/photo/2020/08/27/14/55/adler-5522202_960_720.jpg" alt="">
