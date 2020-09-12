@@ -9,10 +9,58 @@
     </div>
 
     <div id="container" class="featured">
-        <div class="featured__large">large</div>
-        <div class="featured__medium">medium</div>
-        <div class="featured__small--one">small one</div>
-        <div class="featured__small--two">small two</div>
+        <div class="featured__large">
+            <div class="img-wrapper">
+                <img src="https://cdn.pixabay.com/photo/2020/08/27/14/55/adler-5522202_960_720.jpg" alt="">
+            </div>
+            <div class="featured__prose">
+                <div class="featured__prose--category">
+                    Category
+                </div>
+                <div class="featured__prose--title">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio, iure?
+                </div>
+            </div>
+        </div>
+        <div class="featured__medium">
+            <div class="img-wrapper">
+                    <img src="https://cdn.pixabay.com/photo/2020/08/27/14/55/adler-5522202_960_720.jpg" alt="">
+            </div>
+            <div class="featured__prose">
+                <div class="featured__prose--category">
+                    Category
+                </div>
+                <div class="featured__prose--title">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio, iure?
+                </div>
+            </div>
+        </div>
+        <div class="featured__small--one">
+            <div class="img-wrapper">
+                <img src="https://cdn.pixabay.com/photo/2020/08/27/14/55/adler-5522202_960_720.jpg" alt="">
+            </div>
+            <div class="featured__prose">
+                <div class="featured__prose--category">
+                    Category
+                </div>
+                <div class="featured__prose--title">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio, iure?
+                </div>
+            </div>
+        </div>
+        <div class="featured__small--two">
+            <div class="img-wrapper">
+                <img src="https://cdn.pixabay.com/photo/2020/08/27/14/55/adler-5522202_960_720.jpg" alt="">
+            </div>
+            <div class="featured__prose">
+                <div class="featured__prose--category">
+                    Category
+                </div>
+                <div class="featured__prose--title">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio, iure?
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Topic One -->
