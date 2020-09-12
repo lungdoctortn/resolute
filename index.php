@@ -15,7 +15,7 @@
             </div>
             <div class="featured__prose">
                 <div class="featured__prose--category">
-                    Category
+                    Category one
                 </div>
                 <div class="featured__prose--title">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio, iure?
