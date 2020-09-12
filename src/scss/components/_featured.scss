@@ -60,6 +60,7 @@
 
     @include veryLarge {
         max-width: 1500px;
+        height: 600px;
     }
 
     &__large {
@@ -77,6 +78,10 @@
         @include Medium {
             height: 400px;
         }
+
+        @include veryLarge {
+            height: 600px;
+        }
     }
 
     &__medium {
@@ -91,6 +96,10 @@
 
         @include Medium {
             height: 200px;
+        }
+
+        @include veryLarge {
+            height: 300px;
         }
     }
 
@@ -109,6 +118,10 @@
             height: 195px;
             font-size: 16px;
         }
+
+        @include veryLarge {
+            height: 295px;
+        }
     }
 
     &__small--two {
@@ -125,6 +138,10 @@
         @include Medium {
             height: 195px;
             font-size: 16px;
+        }
+
+        @include veryLarge {
+            height: 295px;
         }
     }
 
