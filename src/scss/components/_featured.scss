@@ -163,6 +163,16 @@
             font-weight: 700;
             padding: 5px 10px;
         }
+
+        &--excerpt {
+            display: none;
+
+            @include Medium {
+                display: block;
+                padding: 10px 20px;
+                font-weight: 700;
+            }
+        }
     }
 }
 

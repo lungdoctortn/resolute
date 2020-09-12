@@ -35,7 +35,10 @@
                         <?php the_category( ', ' ); ?>
                     </div>
                     <div class="featured__prose--title">
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    </div>
+                    <div class="featured__prose--excerpt">
+                        <p><?php echo wp_trim_words( get_the_excerpt(  ), 20 ); ?></p>
                     </div>
                 </div>
 
@@ -44,7 +47,6 @@
                 wp_reset_postdata();
             endif;
         ?>
-
 
         </div>
         <div class="featured__medium">
