@@ -6,7 +6,6 @@
 			<div class="single__image--wrapper">
 				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'blog-single-image', array( 'class' => "single-image") ); ?></a>
 			</div>
-			<!-- <h3 id="importance" data-toggle="modal" data-target="#centralModalInfo"><?php echo get_post_meta($post -> ID, 'importance', true); ?></h3> -->
 		</div>
 		<h2 class="single__title" ><?php the_title(); ?></h2>
 		<div class="meta-info">
@@ -28,6 +27,8 @@
         </div>
 </article>
 
+<hr class="horizontal-rule">
+
 <div class="post-pagination-wrapper">
     <div class="post-pagination-wrapper prev">
         <?php  
@@ -38,6 +39,7 @@
             );
         ?>
     </div>
+
     <div class="post-pagination-wrapper next">
         <?php  
             next_post_link(
