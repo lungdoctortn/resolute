@@ -2,8 +2,10 @@
 
 <div class="archive">
     <div class="archive__headline">
-        <div class="archive__headline--title"></div>
-        <div class="archive__headline--subtitle"></div> 
+        <?php 
+            the_archive_title( '<h1 class="archive__headline--title">', '</h1>' );
+            the_archive_description( '<h3 class="archive__headline--subtitle">', '</h3>'  );
+        ?>
     </div>
     <div class="archive__content">
         <?php while ( have_posts() ) : the_post(); // standard WordPress loop. ?>
