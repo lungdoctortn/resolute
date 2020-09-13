@@ -26,7 +26,7 @@ function resolute_configuration(){
         add_theme_support( 'title-tag' );
         add_image_size( 'reasons', 200, 200, true );
         add_image_size( 'blog-image', 300, 260, true );
-        add_image_size( 'blog-single-image', 1110, 250, true);
+        add_image_size( 'blog-single-image', 1200, 500, true);
         add_image_size( 'secondary-image', 500, 250, true );
         add_image_size( 'front-page-featured', 800, 800, true);
         add_image_size( 'related-posts', 800, 300, true );

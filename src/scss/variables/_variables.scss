@@ -5,7 +5,23 @@
     font-family: sans-serif;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 #container a {
     text-decoration: none;
     color: white;
 }
+
+article a {
+    color: steelblue;
+    text-decoration: none;
+    transition: 0.5s;
+
+    &:hover {
+        color: red;
+    }
+}
+

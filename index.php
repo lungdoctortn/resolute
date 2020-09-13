@@ -32,7 +32,8 @@
                 </div>
                 <div class="featured__prose">
                     <div class="featured__prose--category">
-                        <?php the_category( ', ' ); ?>
+                        <a href="<?php the_permalink(); ?>"><?php the_category( ', ' ); ?></a>
+                        
                     </div>
                     <div class="featured__prose--title">
                         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
