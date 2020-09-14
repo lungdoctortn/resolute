@@ -1,0 +1,28 @@
+.archive {
+    &__sidebar {
+
+        background-color: lightyellow;
+        height: min-content;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        li {
+            text-align: left;
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: steelblue;
+                padding-left: 40px;
+                padding-bottom: 10px;
+                text-align: left;
+                display: inline-block;
+                transition: .5s;
+
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+}

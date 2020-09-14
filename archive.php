@@ -15,7 +15,7 @@
         <?php endwhile; // end of the loop. ?>
     </div>
     <div class="archive__sidebar">
-            
+        <aside class="sidebar-archive"><?php get_sidebar( 'archive' ); ?></aside>		
     </div>
 </div>
 

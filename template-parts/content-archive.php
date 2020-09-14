@@ -1,3 +1,5 @@
+
+
 <article <?php post_class(array( 'class' => 'blog-post' ) ); ?>>
 	<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 	<div class="thumbnail">
@@ -8,5 +10,5 @@
 		<p>Categories: <?php the_category( ', ' ); ?></p>
 		<p><?php the_tags('Tags: ', ', ' ); ?></p>		
 	</div>
-	<p><?php the_excerpt(); ?></p>
+		<p class="archive__paragraph" ><?php the_excerpt(); ?></p>
 </article>

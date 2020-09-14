@@ -42,3 +42,32 @@ function resolute_configuration(){
         }
     }
     add_action( 'after_setup_theme', 'resolute_configuration', 0 );
+
+    // Register the Sidebars
+
+    add_action('widgets_init', 'resolute_sidebars');
+    function resolute_sidebars() {
+        register_sidebar(
+            array(
+                'name' => 'Archives Sidebar',
+                'id' => 'archives-sidebar',
+                'description' => 'Archives Sidebar.  You can add your widgets here. ',
+                'before_widget' => '<div class="widget-wrapper">',
+                'after_widget' => '</div>',
+                'before_title' => '<h2 class="widget-title">',
+                'after_title' => '</h2>'
+            )
+        );
+    }
+
+// Adding a modified excerpt length
+function mytheme_custom_excerpt_length( $length ) {
+    return 150;
+}
+add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
+
+// Adding a 'Read More' link
+function excerpt_readmore() {
+    return '...<a href="'. get_permalink( get_the_ID() ) . '" class="readmore">' . ' ' . '<span class="readmoreclass">Read More</span><span class="readmorearrow"> &raquo;</span>' . '</a>';
+}
+add_filter('excerpt_more', 'excerpt_readmore');
