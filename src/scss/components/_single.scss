@@ -1,83 +1,84 @@
 .single {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    margin: 0 auto;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin: 0 auto;
 
-    @include Large {
-        width: 1200px;
-    }
+  @include Large {
+    width: 1200px;
+  }
 }
 
 .single-post #site-content {
-    width: 100%;
-
+  width: 100%;
 }
 
 .single-image {
-    margin: 0 auto;
-    object-fit: cover;
-    width: 100%;
-    height: 500px;
+  margin: 0 auto;
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
 }
 
 .single__title {
-    text-align: center;
-    padding-top: 10px;
+  text-align: center;
+  padding-top: 10px;
 
-    @include Large {
-        font-size: 36px;
-        font-weight: bold;
-    }
+  @include Large {
+    font-size: 36px;
+    font-weight: bold;
+  }
 }
 
 .meta-info {
-    margin: 10px 15px 15px;
+  margin: 10px 15px 15px;
 }
 
 .content {
-    margin: 0 20px;
+  margin: 0 20px;
 }
 
-blockquote {
-    color: steelblue;
-    margin-left: 30px;
+blockquote p {
+  color: steelblue;
+  margin-left: 30px;
 }
 
 .post-pagination-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 2fr;
-    padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  padding: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .direction-previous {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-    text-align: center;
-    padding-bottom: 5px;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  text-align: center;
+  padding-bottom: 5px;
 }
 
 .direction-next {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-    text-align: center;
-    padding-bottom: 5px;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  text-align: center;
+  padding-bottom: 5px;
 }
 
 h4 {
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-    text-align: center;
-    text-decoration: none;
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  text-align: center;
+  text-decoration: none;
 
-    a {
-        text-decoration: none !important;
-        color: steelblue;
-        transition: .3s;
+  a {
+    text-decoration: none !important;
+    color: steelblue;
+    transition: 0.3s;
 
-        &:hover {
-            color: red;
-        }
+    &:hover {
+      color: red;
     }
+  }
 }

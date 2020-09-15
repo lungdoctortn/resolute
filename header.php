@@ -7,4 +7,23 @@
 <link rel="stylesheet" href="./final/css/styles.css">
 <?php wp_head(); ?>
 </head>
+<header>
+    <div class="navigation">
+        <div class="navigation__menu">
+            <div class="navigation__menu--brand">
+                This is the one
+            </div>
+            <?php
+                wp_nav_menu (
+                    array(
+                        'theme_location' => 'main_menu',
+                        'menu_class' => 'menu'
+                    )
+                )
+            ?>
+        </div>
+    </div>
+</header>
+
+
 <body>

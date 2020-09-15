@@ -16,8 +16,8 @@ function resolute_configuration(){
     //Registering the menus
         register_nav_menus(
             array(
-                'my_main_menu' => 'Main Menu',
-                'my_footer_menu' => 'Footer Menu'
+                'main_menu' => 'Main Menu',
+                'footer_menu' => 'Footer Menu'
                 )
             );
     
@@ -65,6 +65,7 @@ function mytheme_custom_excerpt_length( $length ) {
     return 150;
 }
 add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
+
 
 // Adding a 'Read More' link
 function excerpt_readmore() {
