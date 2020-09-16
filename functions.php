@@ -72,3 +72,20 @@ function excerpt_readmore() {
     return '...<a href="'. get_permalink( get_the_ID() ) . '" class="readmore">' . ' ' . '<span class="readmoreclass">Read More</span><span class="readmorearrow"> &raquo;</span>' . '</a>';
 }
 add_filter('excerpt_more', 'excerpt_readmore');
+
+add_filter( 'get_the_archive_title', function ( $title ) {
+    if( is_category() ) {
+        // $title = single_cat_title( '', false, 'categories' );
+        $title = sprintf( __( '"%s" Article Items' ), single_cat_title( '', false ));
+    } elseif ( is_tag() ) {
+        $title = sprintf( __( '"%s" Article Items' ), single_tag_title( '', false ));
+    } elseif ( is_date() ) {
+		$year     = get_query_var('year');
+		$month = get_query_var('monthnum');
+		$monthName = date("F", mktime(0, 0, 0, $month, 10));
+		$day      = get_query_var('day');
+
+		$title = 'Items Posted In ' . $monthName . ', ' . $year; 
+	}
+    return $title;
+});

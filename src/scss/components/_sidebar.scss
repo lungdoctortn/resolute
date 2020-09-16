@@ -7,17 +7,25 @@
         padding-bottom: 20px;
 
         li {
-            text-align: left;
+            text-align: center;
             list-style: none;
+
+            @include Medium {
+                text-align: left;
+            }
 
             a {
                 text-decoration: none;
                 color: steelblue;
-                padding-left: 40px;
+                padding-left: 0px;
                 padding-bottom: 10px;
                 text-align: left;
                 display: inline-block;
                 transition: .5s;
+
+                @include Medium {
+                    padding-left: 40px;
+                }
 
                 &:hover {
                     color: red;

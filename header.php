@@ -11,7 +11,7 @@
     <div class="navigation">
         <div class="navigation__menu">
             <div class="navigation__menu--brand">
-                This is the one
+                <a href="<?php echo get_home_url() ?>"><?php esc_html_e( 'The Resolute', 'resolute') ?></a> 
             </div>
             <?php
                 wp_nav_menu (

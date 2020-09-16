@@ -1,0 +1,14 @@
+.meta-info {
+    position: relative;
+    margin-top: -5px;
+    
+
+    p:first-child {
+        margin-bottom: 0;
+    }
+
+    p + p {
+        position: relative;
+        bottom: 2px;
+    }
+}

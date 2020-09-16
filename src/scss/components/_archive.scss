@@ -54,19 +54,44 @@
     }
 
     &__sidebar {
+        margin-left: 0px;
         grid-area: sidebar;
+        border: 1px solid black;
+        position: relative;
+        top: 1rem;
+
+        @include Medium {
+            margin-left: 20px;
+        }
+
+        h2 {
+            padding-bottom: 1rem;
+        }
     }
 
     &__paragraph + p {
         text-align: left;
     }
+
+    &__content {
+        h2 {
+            text-align: center;
+            color: black;
+            padding-bottom: 16px;
+            background-color: lightgray;
+            margin: 15px; 
+            padding: 10px 0;
+            transition: .5s;
+        
+            &:hover {
+                color: red;
+                cursor: pointer;
+            }
+        }
+    }
 }
 
-h2 {
-    text-align: center;
-    color: black;
-    padding-bottom: 16px;
-}
+
 
 
 article.blog-post {
