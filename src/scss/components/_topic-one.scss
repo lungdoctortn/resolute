@@ -98,11 +98,13 @@
         &.one {
             background-color: chartreuse;
             grid-area: one;
+            position: relative;
         }
 
         &.two {
             background-color: pink;
             grid-area: two;
+            position: relative
         }
     }
 
@@ -112,20 +114,70 @@
 
         &.one {
             background-color: red;
-            grid-area: three
+            grid-area: three;
+            position: relative;
         }
         &.two {
             background-color: green;
-            grid-area: four
+            grid-area: four;
+            position: relative;
         }
         &.three {
             background-color: pink;
-            grid-area: five
+            grid-area: five;
+            position: relative;
         }
         &.four {
             background-color: coral;
             grid-area: six;
+            position: relative;
+        }
+    }
+
+    &__prose {
+        position: absolute;
+        color: white;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0,0,0,.5);
+        
+        &--category {
+            width: max-content;
+            padding: 5px 10px;
+            background-color: red;
+        }
+
+        &--title {
+            background-color: transparent;
+            color: white;
+            font-weight: 700;
+            padding: 5px 10px;
+
+            @include Medium {
+                padding: 10px 0 0;
+                text-align: center;
+            }
+        
+        }
+
+        &--excerpt {
+            display: none;
+
+            @include Medium {
+                display: block;
+                padding: 10px 20px;
+                font-weight: 700;
+            }
         }
     }
 }
 
+.img-wrapper {
+    height: 100%;
+    width: 100%;
+img {
+    object-fit: cover;
+    height: 100%;
+    }
+}

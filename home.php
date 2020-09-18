@@ -52,7 +52,7 @@
     </article>
 
         <!-- This is the medium image on the featured topics section -->
-        <article <?php post_class( array( 'class' => 'featured__medium' ) ); ?>>
+    <article <?php post_class( array( 'class' => 'featured__medium' ) ); ?>>
 
         <?php
             $featuredArguments = array(
@@ -132,7 +132,7 @@
     </article>
 
         <!-- This is the small right image on the featured topics section -->
-        <article <?php post_class( array( 'class' => 'featured__small--two' ) ); ?>>
+    <article <?php post_class( array( 'class' => 'featured__small--two' ) ); ?>>
 
 <?php
     $featuredArguments = array(
@@ -171,23 +171,108 @@
 
 </article>
 
-
-    </div>
+</div>
 
     <!-- Topic One -->
-
+    <?php $socialism = "socialism"; ?>
+    
     <div class="topic-one-headline">
-        <div class="topic-one-headline__title"><h1>Topic One</h1></div>
-        <div class="topic-one-headline__subtitle"><h2>Education is expensive, Ignorance much more so</h2></div>
+        <div class="topic-one-headline__title"><h1><?php esc_html_e ( $socialism, 'theresolute' ) ?></h1>
+        </div>
+        <div class="topic-one-headline__subtitle"><h2><?php esc_html_e(  'The Government Controls Your Life', 'theresolute' ) ?></h2></div>
         <div class="topic-one-banner">
-            <div class="topic-one-banner__title"><h5>topic one</h5></div>
+            <div class="topic-one-banner__title"><h5><?php esc_html_e ( $socialism, 'theresolute' ) ?></h5>
+        </div>
             <hr class="topic-one-banner__line" >
         </div>
     </div>
 
+    <!-- Topic One Large Left Post -->
+
     <div id="container" class="topic-one">
-        <div class="topic-one__medium one">medium</div>
-        <div class="topic-one__medium two">medium</div>
+        <div class="topic-one__medium one">
+        
+        <?php  
+            $topicOneArguments = array(
+                'post_type' => 'post',
+                'posts_per_page' => 1,
+                'orderedby' => "publish_date",
+                'order' => "DESC",
+                'offset' => 0,
+                'category_name' => 'socialism'
+            );    
+
+            $topicOneArguments = new WP_Query( $topicOneArguments );
+            if( $topicOneArguments->have_posts() ):
+                while( $topicOneArguments->have_posts() ):
+                $topicOneArguments->the_post();
+        ?>
+            <div class="img-wrapper">
+                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large', array( 'class' => 'img' ) ); ?></a>
+            </div>
+            <div class="topic-one__prose">
+                <div class="topic-one__prose--category">
+                    <?php the_category( ', ' ); ?>
+                </div>
+                <div class="topic-one__prose--title">
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                </div>
+                <div class="topic-one__prose--excerpt">
+                    <p><?php echo wp_trim_words( get_the_excerpt(  ), 20 ); ?></p>
+                </div>
+            </div>
+
+
+        <?php
+                endwhile;
+                wp_reset_postdata();
+            endif;
+        ?>
+        
+    </div>
+
+    
+        <div class="topic-one__medium two">
+
+        <?php  
+            $topicOneArguments = array(
+                'post_type' => 'post',
+                'posts_per_page' => 1,
+                'orderedby' => "publish_date",
+                'order' => "DESC",
+                'offset' => 1,
+                'category_name' => 'socialism'
+            );    
+
+            $topicOneArguments = new WP_Query( $topicOneArguments );
+            if( $topicOneArguments->have_posts() ):
+                while( $topicOneArguments->have_posts() ):
+                $topicOneArguments->the_post();
+        ?>
+            <div class="img-wrapper">
+                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large', array( 'class' => 'img' ) ); ?></a>
+            </div>
+            <div class="topic-one__prose">
+                <div class="topic-one__prose--category">
+                    <?php the_category( ', ' ); ?>
+                </div>
+                <div class="topic-one__prose--title">
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                </div>
+                <div class="topic-one__prose--excerpt">
+                    <p><?php echo wp_trim_words( get_the_excerpt(  ), 20 ); ?></p>
+                </div>
+            </div>
+
+
+        <?php
+                endwhile;
+                wp_reset_postdata();
+            endif;
+        ?>
+   
+
+        </div>
         <div class="topic-one__small one">small one</div>
         <div class="topic-one__small two">small two</div>
         <div class="topic-one__small three">small three</div>
