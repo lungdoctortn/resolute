@@ -14,39 +14,22 @@
     <article <?php post_class( array( 'class' => 'featured__large' ) ); ?>>
 
         <?php
-            $featuredArguments = array(
-                'post_type' => 'post',
-                'posts_per_page' => 1,
-                'orderedby' => "publish_date",
-                'order' => "DESC",
-                'offset' => 0
-            );
 
-            $featured = new WP_Query( $featuredArguments );
-            if( $featured->have_posts() ):
-                while( $featured->have_posts() ): $featured->the_post();
-            ?>
+            $postsPerPage = '1';
+            $offset = 0;
+            $thumbnailSize = 'large';
+            $excerptLength = 20;
 
-                <div class="img-wrapper">
-                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large', array( 'class' => 'img' ) ); ?></a>
-                </div>
-                <div class="featured__prose">
-                    <div class="featured__prose--category">
-                        <a href="<?php the_permalink(); ?>"><?php the_category( ', ' ); ?></a>
-                        
-                    </div>
-                    <div class="featured__prose--title">
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    </div>
-                    <div class="featured__prose--excerpt">
-                        <p><?php echo wp_trim_words( get_the_excerpt(  ), 20 ); ?></p>
-                    </div>
-                </div>
+            $arguments = [
+                'posts' => $postsPerPage,
+                'offset' => $offset,
+                'size' => $thumbnailSize,
+                'length' => $excerptLength
+            ];
+            
+            set_query_var( 'multiVar', $arguments );
+            get_template_part( 'template-parts/content', 'loop', $arguments );
 
-            <?php
-                endwhile;
-                wp_reset_postdata();
-            endif;
         ?>
 
     </article>
@@ -55,38 +38,22 @@
     <article <?php post_class( array( 'class' => 'featured__medium' ) ); ?>>
 
         <?php
-            $featuredArguments = array(
-                'post_type' => 'post',
-                'posts_per_page' => 1,
-                'orderedby' => "publish_date",
-                'order' => "DESC",
-                'offset' => 1
-            );
 
-            $featured = new WP_Query( $featuredArguments );
-            if( $featured->have_posts() ):
-                while( $featured->have_posts() ): $featured->the_post();
-            ?>
+            $postsPerPage = '1';
+            $offset = 1;
+            $thumbnailSize = 'large';
+            $excerptLength = 20;
 
-                <div class="img-wrapper">
-                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large', array( 'class' => 'img' ) ); ?></a>
-                </div>
-                <div class="featured__prose">
-                    <div class="featured__prose--category">
-                        <?php the_category( ', ' ); ?>
-                    </div>
-                    <div class="featured__prose--title">
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    </div>
-                    <div class="featured__prose--excerpt">
-                        <p><?php echo wp_trim_words( get_the_excerpt(  ), 20 ); ?></p>
-                    </div>
-                </div>
+            $arguments = [
+                'posts' => $postsPerPage,
+                'offset' => $offset,
+                'size' => $thumbnailSize,
+                'length' => $excerptLength
+            ];
 
-            <?php
-                endwhile;
-                wp_reset_postdata();
-            endif;
+            set_query_var( 'multiVar', $arguments );
+            get_template_part( 'template-parts/content', 'loop', $arguments );
+
         ?>
 
     </article>
@@ -95,38 +62,23 @@
     <article <?php post_class( array( 'class' => 'featured__small--one' ) ); ?>>
 
         <?php
-            $featuredArguments = array(
-                'post_type' => 'post',
-                'posts_per_page' => 1,
-                'orderedby' => "publish_date",
-                'order' => "DESC",
-                'offset' => 2
-            );
 
-            $featured = new WP_Query( $featuredArguments );
-            if( $featured->have_posts() ):
-                while( $featured->have_posts() ): $featured->the_post();
-        ?>
 
-            <div class="img-wrapper">
-                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large', array( 'class' => 'img' ) ); ?></a>
-            </div>
-            <div class="featured__prose">
-                <div class="featured__prose--category">
-                    <?php the_category( ', ' ); ?>
-                </div>
-                <div class="featured__prose--title">
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                </div>
-                <div class="featured__prose--excerpt">
-                    <p><?php echo wp_trim_words( get_the_excerpt(  ), 10 ); ?></p>
-                </div>
-            </div>
+            $postsPerPage = '1';
+            $offset = 2;
+            $thumbnailSize = 'large';
+            $excerptLength = 10;
 
-        <?php
-                endwhile;
-                wp_reset_postdata();
-            endif;
+            $arguments = [
+                'posts' => $postsPerPage,
+                'offset' => $offset,
+                'size' => $thumbnailSize,
+                'length' => $excerptLength
+            ];
+
+            set_query_var( 'multiVar', $arguments );
+            get_template_part( 'template-parts/content', 'loop', $arguments );
+
         ?>
 
     </article>
@@ -134,40 +86,25 @@
         <!-- This is the small right image on the featured topics section -->
     <article <?php post_class( array( 'class' => 'featured__small--two' ) ); ?>>
 
-<?php
-    $featuredArguments = array(
-        'post_type' => 'post',
-        'posts_per_page' => 1,
-        'orderedby' => "publish_date",
-        'order' => "DESC",
-        'offset' => 3
-    );
+        <?php
 
-    $featured = new WP_Query( $featuredArguments );
-    if( $featured->have_posts() ):
-        while( $featured->have_posts() ): $featured->the_post();
-?>
 
-    <div class="img-wrapper">
-        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large', array( 'class' => 'img' ) ); ?></a>
-    </div>
-    <div class="featured__prose">
-        <div class="featured__prose--category">
-            <?php the_category( ', ' ); ?>
-        </div>
-        <div class="featured__prose--title">
-            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-        </div>
-        <div class="featured__prose--excerpt">
-            <p><?php echo wp_trim_words( get_the_excerpt(  ), 10 ); ?></p>
-        </div>
-    </div>
+            $postsPerPage = '1';
+            $offset = 3;
+            $thumbnailSize = 'reasons';
+            $excerptLength = 10;
 
-<?php
-        endwhile;
-        wp_reset_postdata();
-    endif;
-?>
+            $arguments = [
+                'posts' => $postsPerPage,
+                'offset' => $offset,
+                'size' => $thumbnailSize,
+                'length' => $excerptLength
+            ];
+
+            set_query_var( 'multiVar', $arguments );
+            get_template_part( 'template-parts/content', 'loop', $arguments );
+
+        ?>
 
 </article>
 
