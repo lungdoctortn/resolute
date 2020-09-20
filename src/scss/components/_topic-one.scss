@@ -66,6 +66,7 @@
         "four"
         "five"
         "six";
+    grid-gap: 5px;
 
     @include Small {
         width: 90vw;
@@ -97,13 +98,13 @@
 
         &.one {
             background-color: chartreuse;
-            grid-area: one;
+            grid-area: two;
             position: relative;
         }
 
         &.two {
             background-color: pink;
-            grid-area: two;
+            grid-area: one;
             position: relative
         }
     }
@@ -113,22 +114,22 @@
         height: 150px;
 
         &.one {
-            background-color: red;
+            background-color: chartreuse;
             grid-area: three;
             position: relative;
         }
         &.two {
-            background-color: green;
+            background-color: skyblue;
             grid-area: four;
             position: relative;
         }
         &.three {
-            background-color: pink;
+            background-color: purple;
             grid-area: five;
             position: relative;
         }
         &.four {
-            background-color: coral;
+            background-color: green;
             grid-area: six;
             position: relative;
         }

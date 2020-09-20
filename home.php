@@ -4,8 +4,8 @@
 <section class="articles">
 
     <div class="featured-headline">
-        <div class="featured-headline__title"><h1>Featured Topics</h1></div>
-        <div class="featured-headline__subtitle"><h2>Topics of Particular Importance</h2></div>
+        <div class="featured-headline__title"><h1><?php esc_html_e( 'Featured Topics', 'theresolute' ) ?></h1></div>
+        <div class="featured-headline__subtitle"><h2><?php esc_html_e( 'Topics of Particular Importance', 'theresolute' ) ?></h2></div>
     </div>
 
     <div id="container" class="featured">

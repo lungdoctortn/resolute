@@ -1,7 +1,6 @@
 .archive {
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 50px;
     text-align: center;
     width: 100%;
     margin: 0 auto;
@@ -49,8 +48,16 @@
 
     &__headline {
         text-align: center;
-        margin-top: 70px;
+        margin-top: 20px;
         grid-area: headline;
+
+        @include Small {
+            margin-top: 40px;
+        }
+
+        @include Large {
+            margin-top: 70px;
+        }
     }
 
     &__sidebar {
@@ -74,6 +81,11 @@
     }
 
     &__content {
+
+        @include Small {
+            margin-right: 20px;
+        }
+
         h2 {
             text-align: center;
             color: black;
@@ -89,27 +101,35 @@
             }
         }
     }
+
+    &-image {
+        margin: 0 1rem 1rem;
+        
+        @include Small {
+            float: left;
+        }
+    }
 }
-
-
-
 
 article.blog-post {
     min-height: 350px;
     grid-area: blog-post;
 }
 
-.archive-image {
-    float: left;
-    margin: 0 1rem 1rem
-}
+// .archive-image {
+//     // float: left;
+//     margin: 0 1rem 1rem;
+    
+
+// }
 
 .readmore {
     color: steelblue;
     font-weight: bold;
-    background-color: lightgray;
-    display: block;
+    // background-color: lightgray;
+    // display: block;
     width: max-content;
-    padding: 5px 10px;
+    // padding: 5px 10px;
     border-radius: 5px;
+    margin-top: 10px;
 }

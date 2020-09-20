@@ -10,5 +10,8 @@
 		<p>Categories: <?php the_category( ', ' ); ?></p>
 		<p><?php the_tags('Tags: ', ', ' ); ?></p>		
 	</div>
-		<p class="archive__paragraph" ><?php the_excerpt(); ?></p>
+		<!-- <p class="archive__paragraph" ><?php the_excerpt(); ?></p> -->
+		<?php add_filter("excerpt_length", "custom_excerpt_length_short", 999); ?>
+			<p class="archive__paragraph"><?php the_excerpt(); ?></p>
+		<?php remove_filter("excerpt_length", "custom_excerpt_length_short", 999); ?>
 </article>

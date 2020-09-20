@@ -86,6 +86,12 @@ add_filter( 'get_the_archive_title', function ( $title ) {
 		$day      = get_query_var('day');
 
 		$title = 'Items Posted In ' . $monthName . ', ' . $year; 
-	}
+	} elseif ( is_author() ) {
+        $title = sprintf( __( 'Post Items Written by "%s"' ), get_the_author() );
+    }
     return $title;
 });
+
+function custom_excerpt_length_short( $length ){
+    return 60;
+}
