@@ -124,90 +124,57 @@
         </div>
     </div>
 
-    <!-- Topic One Large Left Post -->
+    <!-- Topic One Large Left Post of Topic One -->
 
     <div id="container" class="topic-one">
         <div class="topic-one__medium one">
         
-        <?php  
-            $topicOneArguments = array(
-                'post_type' => 'post',
-                'posts_per_page' => 1,
-                'orderedby' => "publish_date",
-                'order' => "DESC",
-                'offset' => 0,
-                'category_name' => 'socialism'
-            );    
+            <?php
 
-            $topicOneArguments = new WP_Query( $topicOneArguments );
-            if( $topicOneArguments->have_posts() ):
-                while( $topicOneArguments->have_posts() ):
-                $topicOneArguments->the_post();
-        ?>
-            <div class="img-wrapper">
-                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large', array( 'class' => 'img' ) ); ?></a>
-            </div>
-            <div class="topic-one__prose">
-                <div class="topic-one__prose--category">
-                    <?php the_category( ', ' ); ?>
-                </div>
-                <div class="topic-one__prose--title">
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                </div>
-                <div class="topic-one__prose--excerpt">
-                    <p><?php echo wp_trim_words( get_the_excerpt(  ), 20 ); ?></p>
-                </div>
-            </div>
+                $postsPerPage = '1';
+                $offset = 0;
+                $thumbnailSize = 'large';
+                $excerptLength = 20;
+                $categoryType = 'socialism';
 
+                $arguments = [
+                    'posts' => $postsPerPage,
+                    'offset' => $offset,
+                    'size' => $thumbnailSize,
+                    'length' => $excerptLength,
+                    'category' => $categoryType
+                ];
 
-        <?php
-                endwhile;
-                wp_reset_postdata();
-            endif;
-        ?>
+                set_query_var( 'multiVar', $arguments );
+                get_template_part( 'template-parts/content', 'loop', $arguments );
+
+            ?>
         
-    </div>
+        </div>
 
     
         <div class="topic-one__medium two">
 
-        <?php  
-            $topicOneArguments = array(
-                'post_type' => 'post',
-                'posts_per_page' => 1,
-                'orderedby' => "publish_date",
-                'order' => "DESC",
-                'offset' => 1,
-                'category_name' => 'socialism'
-            );    
+            <?php
 
-            $topicOneArguments = new WP_Query( $topicOneArguments );
-            if( $topicOneArguments->have_posts() ):
-                while( $topicOneArguments->have_posts() ):
-                $topicOneArguments->the_post();
-        ?>
-            <div class="img-wrapper">
-                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large', array( 'class' => 'img' ) ); ?></a>
-            </div>
-            <div class="topic-one__prose">
-                <div class="topic-one__prose--category">
-                    <?php the_category( ', ' ); ?>
-                </div>
-                <div class="topic-one__prose--title">
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                </div>
-                <div class="topic-one__prose--excerpt">
-                    <p><?php echo wp_trim_words( get_the_excerpt(  ), 20 ); ?></p>
-                </div>
-            </div>
+                $postsPerPage = '1';
+                $offset = 1;
+                $thumbnailSize = 'large';
+                $excerptLength = 20;
+                $categoryType = 'socialism';
 
+                $arguments = [
+                    'posts' => $postsPerPage,
+                    'offset' => $offset,
+                    'size' => $thumbnailSize,
+                    'length' => $excerptLength,
+                    'category' => $categoryType
+                ];
 
-        <?php
-                endwhile;
-                wp_reset_postdata();
-            endif;
-        ?>
-   
+                set_query_var( 'multiVar', $arguments );
+                get_template_part( 'template-parts/content', 'loop', $arguments );
+
+            ?>
 
         </div>
         <div class="topic-one__small one">small one</div>

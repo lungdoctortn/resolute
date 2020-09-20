@@ -98,13 +98,13 @@
 
         &.one {
             background-color: chartreuse;
-            grid-area: two;
+            grid-area: one;
             position: relative;
         }
 
         &.two {
             background-color: pink;
-            grid-area: one;
+            grid-area: two;
             position: relative
         }
     }
@@ -114,7 +114,7 @@
         height: 150px;
 
         &.one {
-            background-color: chartreuse;
+            background-color: lightgreengit;
             grid-area: three;
             position: relative;
         }

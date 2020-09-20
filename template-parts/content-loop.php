@@ -6,7 +6,8 @@
                 'posts_per_page' => $args['posts'],
                 'orderedby' => "publish_date",
                 'order' => "DESC",
-                'offset' => $args['offset']
+                'offset' => $args['offset'],
+                'category_name' => $args['category']
             );
 
             $featured = new WP_Query( $featuredArguments );
