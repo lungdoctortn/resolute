@@ -177,8 +177,54 @@
             ?>
 
         </div>
-        <div class="topic-one__small one">small one</div>
-        <div class="topic-one__small two">small two</div>
+        <div class="topic-one__small one">
+
+            <?php
+
+                $postsPerPage = '1';
+                $offset = 2;
+                $thumbnailSize = 'blog-image';
+                $excerptLength = 10;
+                $categoryType = 'socialism';
+
+                $arguments = [
+                    'posts' => $postsPerPage,
+                    'offset' => $offset,
+                    'size' => $thumbnailSize,
+                    'length' => $excerptLength,
+                    'category' => $categoryType
+                ];
+
+                set_query_var( 'multiVar', $arguments );
+                get_template_part( 'template-parts/content', 'loopTopicOne', $arguments );
+
+            ?>
+
+        </div>
+        <div class="topic-one__small two">
+
+            <?php
+
+                $postsPerPage = '1';
+                $offset = 2;
+                $thumbnailSize = 'blog-image';
+                $excerptLength = 10;
+                $categoryType = 'socialism';
+
+                $arguments = [
+                    'posts' => $postsPerPage,
+                    'offset' => $offset,
+                    'size' => $thumbnailSize,
+                    'length' => $excerptLength,
+                    'category' => $categoryType
+                ];
+
+                set_query_var( 'multiVar', $arguments );
+                get_template_part( 'template-parts/content', 'loopTopicOne', $arguments );
+
+            ?>
+
+        </div>
         <div class="topic-one__small three">small three</div>
         <div class="topic-one__small four">small four</div>
     </div>
