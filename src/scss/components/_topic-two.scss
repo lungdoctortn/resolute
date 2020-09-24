@@ -28,7 +28,7 @@
 
     h5 {
         color: white;
-        background-color: green;
+        background-color: red;
         display: inline-block;
         padding: 5px 10px;
         text-transform: uppercase;
@@ -36,7 +36,7 @@
     }
 
     &__line {
-        border-top: 2px solid green;
+        border-top: 2px solid red;
     }
 
     @include Small {
@@ -162,6 +162,7 @@
     &__post1 {
         background-color: lightblue;
         height: 300px;
+        position: relative;
 
         @include Medium {
             height: 400px;
@@ -183,6 +184,40 @@
 
         @include Medium {
             height: 400px;
+        }
+    }
+
+    &__prose {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0,0,0,.5);
+        width: 100%;
+
+        &--category {
+
+            padding: 5px 10px;
+            background-color: red;
+            max-width: max-content;
+
+            a {
+                color: white !important;
+            }
+        }
+        
+        &--title {
+            padding-top: 10px;
+            text-align: center;
+            font-size: 24px;
+
+            a {
+                color: white !important;
+            }
+        }
+
+        &--excerpt {
+            color: white;
+            padding: 0 5px;
         }
     }
 }

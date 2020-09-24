@@ -278,8 +278,8 @@
     <!-- Topic Two -->
 
     <div class="topic-two-headline">
-        <div class="topic-two-headline__title"><h1>Topic Two</h1></div>
-        <div class="topic-two-headline__subtitle"><h2>It's Back!</h2></div>
+        <div class="topic-two-headline__title"><h1>School Choice</h1></div>
+        <div class="topic-two-headline__subtitle"><h2>How to Escape Failing Schools</h2></div>
         <div class="topic-two-banner">
             <div class="topic-two-banner__title"><h5>topic two</h5></div>
             <hr class="topic-two-banner__line" >
@@ -287,7 +287,30 @@
     </div>
 
     <div id="container" class="topic-two">
-        <div class="topic-two__post1">post one</div>
+        <div class="topic-two__post1">
+
+            <?php
+
+                $postsPerPage = '1';
+                $offset = 2;
+                $thumbnailSize = 'blog-image';
+                $excerptLength = 10;
+                $categoryType = 'charter';
+
+                $arguments = [
+                    'posts' => $postsPerPage,
+                    'offset' => $offset,
+                    'size' => $thumbnailSize,
+                    'length' => $excerptLength,
+                    'category' => $categoryType
+                ];
+
+                set_query_var( 'multiVar', $arguments );
+                get_template_part( 'template-parts/content', 'loopTopicTwo', $arguments );
+
+            ?>
+        
+        </div>
         <div class="topic-two__post2">post two</div>
         <div class="topic-two__post3">post three</div>
     </div>
