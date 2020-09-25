@@ -24,3 +24,8 @@ p {
     margin-bottom: .5rem;
 }
 
+/* image caption styling */
+// This forces the caption to break a word rather than bleed into the post
+p.wp-caption-text {
+    overflow-wrap: break-word;
+  }
