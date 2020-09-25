@@ -281,7 +281,7 @@
         <div class="topic-two-headline__title"><h1>School Choice</h1></div>
         <div class="topic-two-headline__subtitle"><h2>How to Escape Failing Schools</h2></div>
         <div class="topic-two-banner">
-            <div class="topic-two-banner__title"><h5>topic two</h5></div>
+            <div class="topic-two-banner__title"><h5>Charter Schools</h5></div>
             <hr class="topic-two-banner__line" >
         </div>
     </div>
@@ -294,7 +294,7 @@
                 $postsPerPage = '1';
                 $offset = 2;
                 $thumbnailSize = 'blog-image';
-                $excerptLength = 10;
+                $excerptLength = 14;
                 $categoryType = 'charter';
 
                 $arguments = [
@@ -311,8 +311,54 @@
             ?>
         
         </div>
-        <div class="topic-two__post2">post two</div>
-        <div class="topic-two__post3">post three</div>
+        <div class="topic-two__post2">
+
+            <?php
+
+                $postsPerPage = '1';
+                $offset = 1;
+                $thumbnailSize = 'blog-image';
+                $excerptLength = 14;
+                $categoryType = 'charter';
+
+                $arguments = [
+                    'posts' => $postsPerPage,
+                    'offset' => $offset,
+                    'size' => $thumbnailSize,
+                    'length' => $excerptLength,
+                    'category' => $categoryType
+                ];
+
+                set_query_var( 'multiVar', $arguments );
+                get_template_part( 'template-parts/content', 'loopTopicTwo', $arguments );
+
+            ?>
+
+        </div>
+        <div class="topic-two__post3">
+
+            <?php
+
+                $postsPerPage = '1';
+                $offset = 0;
+                $thumbnailSize = 'blog-image';
+                $excerptLength = 14;
+                $categoryType = 'charter';
+
+                $arguments = [
+                    'posts' => $postsPerPage,
+                    'offset' => $offset,
+                    'size' => $thumbnailSize,
+                    'length' => $excerptLength,
+                    'category' => $categoryType
+                ];
+
+                set_query_var( 'multiVar', $arguments );
+                get_template_part( 'template-parts/content', 'loopTopicTwo', $arguments );
+
+            ?>
+
+        </div>
     </div>
 
     <!-- Topic Three -->

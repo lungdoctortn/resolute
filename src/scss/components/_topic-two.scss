@@ -140,6 +140,7 @@
         "topic-two__post1"
         "topic-two__post2"
         "topic-two__post3";
+    grid-gap: 5px;
 
     @include Small {
         width: 90vw;
@@ -170,8 +171,9 @@
     }
 
     &__post2 {
-        background-color: lightgreen;
+        background-color: steelblue;
         height: 300px;
+        position: relative;
 
         @include Medium {
             height: 400px;
@@ -181,6 +183,7 @@
     &__post3 {
         background-color: lightgray;
         height: 300px;
+        position: relative;
 
         @include Medium {
             height: 400px;
