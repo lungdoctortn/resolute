@@ -5,14 +5,15 @@
     padding-top: .5rem;
     padding-bottom: 1px;
     margin-bottom: .5rem;
-    background-color: #eee;
 
     p:first-child {
         margin-bottom: 5px;
+        text-align: left;
     }
 
     p + p {
         position: relative;
         bottom: 2px;
+        text-align: left;
     }
 }
