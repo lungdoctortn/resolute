@@ -6,8 +6,8 @@
         'posts_per_page' => $args['posts'],
         'orderedby' => "publish_date",
         'order' => "DESC",
-        'offset' => $args['offset'],
-        'category_name' => $args['category']
+        'category_name' => $args['category'],
+        'offset' => $args['offset']
     );
 
     $featured = new WP_Query( $featuredArguments );
@@ -17,17 +17,18 @@
 
         <div class="img-wrapper">
             <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( '$args["size"]', array( 'class' => 'img' ) ); ?></a>
+
         </div>
-        <div class="featured__prose">
-            <div class="featured__prose--category">
-                <a href="<?php the_permalink(); ?>"><?php the_category( ', ' ); ?></a>
-                
-            </div>
-            <div class="featured__prose--title">
+        <div class="topic-three__prose">
+
+            <div class="topic-three__prose--title">
                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </div>
-            <div class="featured__prose--excerpt">
+            <div class="topic-three__prose--excerpt">
                 <p><?php echo wp_trim_words( get_the_excerpt(  ), $args['length'] ); ?></p>
+            </div>
+            <div class="topic-three__prose--category">
+                <a href="<?php the_permalink(); ?>"><?php the_category( ', ' ); ?></a>
             </div>
         </div>
 

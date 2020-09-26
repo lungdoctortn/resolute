@@ -364,10 +364,10 @@
     <!-- Topic Three -->
     
     <div class="topic-three-headline">
-        <div class="topic-three-headline__title"><h1>Topic Three</h1></div>
-        <div class="topic-three-headline__subtitle"><h2>Better Dead Than Red</h2></div>
+        <div class="topic-three-headline__title"><h1>Abortion</h1></div>
+        <div class="topic-three-headline__subtitle"><h2>Always a Better Choice</h2></div>
         <div class="topic-three-banner">
-            <div class="topic-three-banner__title"><h5>topic three</h5></div>
+            <div class="topic-three-banner__title"><h5>Abortion</h5></div>
             <hr class="topic-three-banner__line" >
         </div>
     </div>

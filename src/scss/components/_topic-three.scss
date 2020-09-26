@@ -64,19 +64,32 @@
         "topic-three__small2"
         "topic-three__small3"
         "topic-three__small4";
+    grid-gap: 5px;
 
-    @include Medium {
+    @include Small {
         width: 90vw;
         max-width: 1200px;
-        background-color: orange;
+        background-color: red;
         grid-template-columns:
             1fr 1fr;
         grid-template-areas:
             "topic-three__large topic-three__small1"
             "topic-three__large topic-three__small2"
             "topic-three__large topic-three__small3"
-            "topic-three__large topic-three__small4";            
+            "topic-three__small4 topic-three__small4";            
         }
+        grid-gap: 5px;
+
+    @include Medium {
+        background-color: green;
+        grid-template-columns:
+            1fr 1fr;
+        grid-template-areas:
+            "topic-three__large topic-three__small1"
+            "topic-three__large topic-three__small2"
+            "topic-three__large topic-three__small3"
+            "topic-three__large topic-three__small4";    
+    }
 
     @include Medium {
         max-width: 1200px;
@@ -91,8 +104,12 @@
         height: 300px;
         grid-area: topic-three__large;
 
+        @include Small {
+            height: 410px;
+        }
+
         @include Medium {
-            height: 400px;
+            height: 615px;
         }
     }
 
@@ -101,8 +118,12 @@
         height: 200px;
         grid-area: topic-three__small1;
 
+        @include Small {
+            height: 133px;
+        }
+
         @include Medium {
-            height: 100px;
+            height: 150px;
         }
     }
 
@@ -111,8 +132,12 @@
         height: 200px;
         grid-area: topic-three__small2;
 
+        @include Small {
+            height: 133px;
+        }
+
         @include Medium {
-            height: 100px;
+            height: 150px;
         }
     }
 
@@ -121,8 +146,12 @@
         height: 200px;
         grid-area: topic-three__small3;
 
+        @include Small {
+            height: 133px;
+        }
+
         @include Medium {
-            height: 100px;
+            height: 150px;
         }
     }
 
@@ -131,8 +160,12 @@
         height: 200px;
         grid-area: topic-three__small4;
 
+        @include Small {
+            height: 200px;
+        }
+
         @include Medium {
-            height: 100px;
+            height: 150px;
         }
     }
 }
