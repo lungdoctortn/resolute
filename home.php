@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-    
 <section class="articles">
 
     <div class="featured-headline">
@@ -63,7 +62,6 @@
 
         <?php
 
-
             $postsPerPage = '1';
             $offset = 2;
             $thumbnailSize = 'large';
@@ -87,7 +85,6 @@
     <article <?php post_class( array( 'class' => 'featured__small--two' ) ); ?>>
 
         <?php
-
 
             $postsPerPage = '1';
             $offset = 3;
@@ -152,7 +149,6 @@
         
         </div>
 
-    
         <div class="topic-one__medium two">
 
             <?php
@@ -344,7 +340,6 @@
                 $thumbnailSize = 'blog-image';
                 $excerptLength = 14;
                 $categoryType = 'charter';
-
                 $arguments = [
                     'posts' => $postsPerPage,
                     'offset' => $offset,
@@ -365,7 +360,7 @@
     
     <div class="topic-three-headline">
         <div class="topic-three-headline__title"><h1>Abortion</h1></div>
-        <div class="topic-three-headline__subtitle"><h2>Always a Better Choice</h2></div>
+        <div class="topic-three-headline__subtitle"><h2>There is Always a Better Choice</h2></div>
         <div class="topic-three-banner">
             <div class="topic-three-banner__title"><h5>Abortion</h5></div>
             <hr class="topic-three-banner__line" >
@@ -373,7 +368,30 @@
     </div>
 
     <div id="container" class="topic-three">
-        <div class="topic-three__large">post large one</div>
+        <div class="topic-three__large">
+
+            <?php
+
+                $postsPerPage = '1';
+                $offset = 0;
+                $thumbnailSize = 'blog-image';
+                $excerptLength = 25;
+                $categoryType = 'charter';
+
+                $arguments = [
+                'posts' => $postsPerPage,
+                'offset' => $offset,
+                'size' => $thumbnailSize,
+                'length' => $excerptLength,
+                'category' => $categoryType
+                ];
+
+                set_query_var( 'multiVar', $arguments );
+                get_template_part( 'template-parts/content', 'loopTopicThree', $arguments );
+
+            ?>
+
+        </div>
         <div class="topic-three__small1">post small1</div>
         <div class="topic-three__small2">post small2</div>
         <div class="topic-three__small3">post small3</div>

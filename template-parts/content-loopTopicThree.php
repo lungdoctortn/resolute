@@ -20,16 +20,16 @@
 
         </div>
         <div class="topic-three__prose">
-
+            <div class="topic-three__prose--category">
+                <a href="<?php the_permalink(); ?>"><?php the_category( ', ' ); ?></a>
+            </div>
             <div class="topic-three__prose--title">
                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </div>
             <div class="topic-three__prose--excerpt">
                 <p><?php echo wp_trim_words( get_the_excerpt(  ), $args['length'] ); ?></p>
             </div>
-            <div class="topic-three__prose--category">
-                <a href="<?php the_permalink(); ?>"><?php the_category( ', ' ); ?></a>
-            </div>
+
         </div>
 
     <?php

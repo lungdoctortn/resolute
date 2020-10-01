@@ -100,9 +100,10 @@
     }
 
     &__large {
-        background-color: lightblue;
+        background-color: lightseagreen;
         height: 300px;
         grid-area: topic-three__large;
+        position: relative;
 
         @include Small {
             height: 410px;
@@ -156,7 +157,7 @@
     }
 
     &__small4 {
-        background-color: chartreuse;
+        background-color: gray;
         height: 200px;
         grid-area: topic-three__small4;
 
@@ -166,6 +167,41 @@
 
         @include Medium {
             height: 150px;
+        }
+    }
+
+    &__prose {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0,0,0,.5);
+        width: 100%;
+
+        &--category {
+
+            padding: 5px 10px;
+            background-color: red;
+            max-width: max-content;
+
+            a {
+                color: white !important;
+            }
+        }
+        
+        &--title {
+            padding-top: .5rem;
+            text-align: center;
+            font-size: 1.5rem;
+            padding-bottom: 1rem;
+
+            a {
+                color: white !important;
+            }
+        }
+
+        &--excerpt {
+            color: white;
+            padding: 0 5px;
         }
     }
 }

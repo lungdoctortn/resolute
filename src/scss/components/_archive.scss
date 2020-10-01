@@ -100,8 +100,6 @@
                 cursor: pointer;
             }
         }
-
-
     }
 
     &-image {
@@ -123,20 +121,10 @@ article.blog-post {
     grid-area: blog-post;
 }
 
-// .archive-image {
-//     // float: left;
-//     margin: 0 1rem 1rem;
-    
-
-// }
-
 .readmore {
     color: steelblue;
     font-weight: bold;
-    // background-color: lightgray;
-    // display: block;
     width: max-content;
-    // padding: 5px 10px;
     border-radius: 5px;
     margin-top: 10px;
 }
@@ -158,5 +146,4 @@ article.blog-post {
     @include Small {
         display: block;
     }
-
 }
