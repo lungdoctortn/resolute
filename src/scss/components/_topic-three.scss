@@ -118,6 +118,7 @@
         background-color: lightgreen;
         height: 200px;
         grid-area: topic-three__small1;
+        position: relative;
 
         @include Small {
             height: 133px;
@@ -132,6 +133,7 @@
         background-color: lightgray;
         height: 200px;
         grid-area: topic-three__small2;
+        position: relative;
 
         @include Small {
             height: 133px;
@@ -146,6 +148,7 @@
         background-color: steelblue;
         height: 200px;
         grid-area: topic-three__small3;
+        position: relative;
 
         @include Small {
             height: 133px;
@@ -160,6 +163,7 @@
         background-color: gray;
         height: 200px;
         grid-area: topic-three__small4;
+        position: relati ve;
 
         @include Small {
             height: 200px;

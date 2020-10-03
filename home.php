@@ -392,7 +392,30 @@
             ?>
 
         </div>
-        <div class="topic-three__small1">post small1</div>
+        <div class="topic-three__small1">
+
+            <?php
+
+                $postsPerPage = '1';
+                $offset = 0;
+                $thumbnailSize = 'blog-image';
+                $excerptLength = 10;
+                $categoryType = 'charter';
+
+                $arguments = [
+                'posts' => $postsPerPage,
+                'offset' => $offset,
+                'size' => $thumbnailSize,
+                'length' => $excerptLength,
+                'category' => $categoryType
+                ];
+
+                set_query_var( 'multiVar', $arguments );
+                get_template_part( 'template-parts/content', 'loopTopicThree', $arguments );
+
+            ?>
+
+        </div>
         <div class="topic-three__small2">post small2</div>
         <div class="topic-three__small3">post small3</div>
         <div class="topic-three__small4">post small4</div>
