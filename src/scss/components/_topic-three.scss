@@ -112,13 +112,50 @@
         @include Medium {
             height: 615px;
         }
+
+        .topic-three__prose {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0,0,0,.5);
+            width: 100%;
+
+            &--category {
+                background-color: red;
+                max-width: max-content;
+                padding: 5px 10px;
+            }
+
+            &--title {
+                font-size: 1.5rem;
+                text-align: center;
+                padding-top: .5rem;
+                padding-bottom: 1rem;
+
+                a {
+                    color: white;
+                }
+            }
+
+            &--excerpt {
+                color: white;
+                text-align: left;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
     }
 
-    &__small1 {
+    &__small1,
+    &__small2,
+    &__small3,
+    &__small4 {
         background-color: lightgreen;
-        height: 200px;
+        display: grid;
+        height: 125px;
         grid-area: topic-three__small1;
         position: relative;
+        grid-template-columns: 1fr 1fr;
 
         @include Small {
             height: 133px;
@@ -126,86 +163,90 @@
 
         @include Medium {
             height: 150px;
+            grid-template-columns: 1fr 2fr;
+        }
+
+        .img-wrapper {
+            grid-column: 1 / 2;
+            align-items: center;
+            display: none;
+
+            @include Medium {
+                display: block;
+            }
+        }
+
+        .topic-three__prose {
+            grid-column: 1 / 3;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0,0,0,.5);
+            width: 100%;
+
+            @include Medium {
+                grid-column: 2 / 3;
+                text-align: left;
+            }
+
+            &--category {
+                display: none;
+                padding: 5px 10px;
+                background-color: red;
+                max-width: max-content;
+    
+                a {
+                    color: white !important;
+                }
+
+                @include Medium {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            &--title {
+                padding-top: .5rem;
+                text-align: center;
+                font-size: 1.5rem;
+                padding-bottom: 1rem;
+    
+                a {
+                    color: white !important;
+                }
+            }
+    
+            &--excerpt {
+                color: white;
+                text-align: left;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
         }
     }
 
     &__small2 {
         background-color: lightgray;
-        height: 200px;
         grid-area: topic-three__small2;
-        position: relative;
-
-        @include Small {
-            height: 133px;
-        }
-
-        @include Medium {
-            height: 150px;
-        }
     }
 
     &__small3 {
         background-color: steelblue;
-        height: 200px;
         grid-area: topic-three__small3;
-        position: relative;
-
-        @include Small {
-            height: 133px;
-        }
-
-        @include Medium {
-            height: 150px;
-        }
     }
 
     &__small4 {
         background-color: gray;
-        height: 200px;
         grid-area: topic-three__small4;
-        position: relati ve;
-
-        @include Small {
-            height: 200px;
-        }
-
-        @include Medium {
-            height: 150px;
-        }
     }
 
-    &__prose {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(0,0,0,.5);
-        width: 100%;
-
-        &--category {
-
-            padding: 5px 10px;
-            background-color: red;
-            max-width: max-content;
-
-            a {
-                color: white !important;
-            }
-        }
-        
-        &--title {
-            padding-top: .5rem;
-            text-align: center;
-            font-size: 1.5rem;
-            padding-bottom: 1rem;
-
-            a {
-                color: white !important;
-            }
-        }
-
-        &--excerpt {
-            color: white;
-            padding: 0 5px;
-        }
-    }
 }
